@@ -140,7 +140,7 @@ namespace ConsoleApp9
                     {
                         if (student.Name.Equals(search_name, StringComparison.OrdinalIgnoreCase)) 
                         {
-                            Console.WriteLine("Такой студент есть:");
+                            Console.WriteLine("Такой студент есть:"); 
                             Console.WriteLine("\n");    
                             student.Print();
                             found = true;
