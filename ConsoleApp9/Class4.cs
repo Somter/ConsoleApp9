@@ -75,7 +75,10 @@ namespace ConsoleApp9
                         break;
 
                     case "4":
-                        academy_Group.Print();
+                        foreach (Student currentStudent in academy_Group)  
+                        {
+                            currentStudent.Print(); 
+                        }
                         break;
 
                     case "5":

@@ -8,10 +8,11 @@ using System.IO;
 
 namespace ConsoleApp9
 {
-    class Academy_Group
+    class Academy_Group : IEnumerable //IEnumerator
     {
         ArrayList students;
         int count;
+        //int curpos = -1;
 
         public Academy_Group() 
         {
@@ -251,5 +252,44 @@ namespace ConsoleApp9
                     break;
             }
         }
+
+        // Используем перечислетель IEnumerable
+        public IEnumerator GetEnumerator()
+        {
+            foreach (Student student in students)
+            {
+                yield return student;
+            }
+        }
+
+        // Используем перечислетель IEnumerator
+        //public void Reset()
+        //{
+        //    curpos = -1;
+        //}
+        //public object Current
+        //{
+        //    get
+        //    {
+        //        return students[curpos]; 
+        //    }
+        //}
+        //public bool MoveNext()
+        //{
+        //    if (curpos < students.Count - 1)
+        //    {
+        //        curpos++;
+        //        return true;
+        //    }
+        //    else
+        //    {
+        //        Reset();
+        //        return false;
+        //    }
+        //}
+        //public IEnumerator GetEnumerator()
+        //{
+        //    return this;
+        //}
     }
 }

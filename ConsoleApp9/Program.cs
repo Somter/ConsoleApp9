@@ -7,12 +7,12 @@ class MainClass
     {
         try
         {
-            ClassMenu menu = new ClassMenu();   
-            menu.Menu();    
-        }
-        catch (Exception ex) 
+            ClassMenu menu = new ClassMenu();       
+            menu.Menu();            
+        }   
+        catch (Exception ex)    
         { 
-            Console.WriteLine(ex.Message);  
-        }
+            Console.WriteLine(ex.Message);        
+        }   
     }
 }
